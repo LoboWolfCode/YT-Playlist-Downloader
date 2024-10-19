@@ -21,7 +21,35 @@ This version of the script gives you more flexibility at the cost of a longer st
 
 WILL ADD LATER
 
+```python
+   import subprocess
+import sys
 
+def download_video(url, output_path, file_type):
+    # Construct the output template based on the file type
+    output_template = f"{output_path}/%(title)s.%(ext)s" if output_path else "%(title)s.%(ext)s"
+    command = [
+        "python", "-m", "yt_dlp", 
+        "-f", file_type, 
+        "-o", output_template, 
+        url
+    ]
+    
+    try:
+        subprocess.run(command, check=True)
+    except subprocess.CalledProcessError as e:
+        print(f"Error occurred: {e}")
+
+if __name__ == "__main__":
+    if len(sys.argv) < 4:
+        print("Usage: python script.py <URL> <output_path> <file_type>")
+    else:
+        url = sys.argv[1]
+        output_path = sys.argv[2]
+        file_type = sys.argv[3]
+        download_video(url, output_path, file_type)
+
+   ```
 
 # Python Script - Customizable Python
 This version of the script gives you a template where you can then change the file type, directory, then save and forget about it. It's shorter than the *Customizable Terminal*, which is good if you plan to download the same file types to the same directory.
