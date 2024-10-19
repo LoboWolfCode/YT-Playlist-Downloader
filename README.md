@@ -20,7 +20,7 @@ This version of the script gives you more flexibility at the cost of a longer st
 
 ## Requirements
 
-- Python 3.x
+- Python 3.x + pip
 - `yt-dlp` module (a fork of `youtube-dl`)
 - FFmpeg (for audio extraction)
 
