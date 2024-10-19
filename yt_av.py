@@ -1,12 +1,17 @@
 import subprocess
 import sys
 
-def download_av(url, output_path, file_type):
-    # Construct the output template based on the file type
-    output_template = f"{output_path}/%(title)s.%(ext)s" if output_path else "%(title)s.%(ext)s"
+def yt_av(url):
+    # Set a fixed output path and file type
+    output_path = r"D:\Music\Ipod"  # Directory for saving files
+    file_type = "mp3"  # Desired file type
+
+    # Construct the output template
+    output_template = f"{output_path}/%(title)s.{file_type}"
     command = [
         "python", "-m", "yt_dlp", 
-        "-f", file_type, 
+        "-x",  # Extract audio
+        "--audio-format", "mp3",  # Specify audio format
         "-o", output_template, 
         url
     ]
@@ -17,10 +22,8 @@ def download_av(url, output_path, file_type):
         print(f"Error occurred: {e}")
 
 if __name__ == "__main__":
-    if len(sys.argv) < 4:
-        print("Usage: python yt_av.py <URL> <output_path> <file_type>")
+    if len(sys.argv) < 2:
+        print("Usage: python yt_av.py <URL>")
     else:
         url = sys.argv[1]
-        output_path = sys.argv[2]
-        file_type = sys.argv[3]
-        download_av(url, output_path, file_type)
+        yt_av(url)
