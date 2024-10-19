@@ -1,13 +1,18 @@
-# YT-Playlist-Downloader
-## Overview
-Download your entire YouTube playlist in seconds, in your preferred file format. It's as easy as a single command.
+<p align="center">
+<img src="img/yt_av(sl)_logo_round.png" width="175" height="175"/>
+</p>
+<p align="center">
 
-Primarily using the `yt-dlp` package, I've simplified the process of bulk downloading videos and songs in your preferred format.
+<h1 align="center">YT-Playlist-Downloader</h1>
+
+<p align="center">Download your entire YouTube playlist in seconds, in your preferred file format. It's as easy as a single command. Primarily using the `yt-dlp` package, I've simplified the process of bulk downloading videos and songs in your preferred format.</p>
+
+___________________________________________________________________
 
 ## Features
 
 - Download entire playlists/individual videos and songs from YouTube.
-- Saves audio files in your desired file format.
+- Saves files in your desired file format.
 - Files are saved to a predefined directory.
 
 ## Content Table (Ctrl-f to get your desired use-case script)
