@@ -6,7 +6,7 @@ Primarily using the `yt-dlp` package, I've simplified the process of bulk downlo
 
 ## Features
 
-- Downloads audio from YouTube videos.
+- Download entire playlists/individual videos and songs from YouTube.
 - Saves audio files in your desired file format.
 - Files are saved to a predefined directory.
 
@@ -53,11 +53,12 @@ def yt_avsl(url, output_path, file_type):
     output_template = f"{output_path}/%(title)s.%(ext)s" if output_path else "%(title)s.%(ext)s"
     command = [
         "python", "-m", "yt_dlp", 
-        "-f", file_type, 
+        "-x",  # Extract audio
+        "--audio-format", file_type,  # Specify the file type
         "-o", output_template, 
         url
     ]
-    
+
     try:
         subprocess.run(command, check=True)
     except subprocess.CalledProcessError as e:
@@ -71,7 +72,6 @@ if __name__ == "__main__":
         output_path = sys.argv[2]
         file_type = sys.argv[3]
         yt_avsl(url, output_path, file_type)
-
    ```
 
 2. **Run the Script**: Use the command line to navigate to the directory where the script is saved. Run the script with the following command:
