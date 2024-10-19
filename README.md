@@ -30,6 +30,7 @@ This version of the script gives you a template where you can then change the fi
 
 - Python 3.x
 - `yt-dlp` module (a fork of `youtube-dl`)
+- FFmpeg (for audio extraction)
 
 ### Installation
 
@@ -39,6 +40,10 @@ This version of the script gives you a template where you can then change the fi
    ```bash
    pip install yt-dlp
    ```
+3. **Install FFmpeg**: 
+   - Download FFmpeg from [ffmpeg.org](https://ffmpeg.org/download.html).
+   - Follow the installation instructions for your operating system.
+   - Ensure that FFmpeg is added to your system's PATH so it can be accessed from the command line.
 
 ## Usage
 
@@ -102,10 +107,10 @@ This command will save the audio as an MP3 file in the `D:\Music\Ipod` directory
 Alternatively to downloading the Python script, you can follow the laborious process to get it working without it :)
 
 
-## Troubleshooting
+## Troubleshooting (All Sections)
 
 - If you encounter errors, ensure that:
-  - Python and `yt-dlp` are properly installed.
+   - Python, `yt-dlp`, and FFmpeg are properly installed.
   - You have a valid YouTube URL.
   - You have write permissions to the specified output directory.
 
