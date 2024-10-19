@@ -200,7 +200,3 @@ Please make sure to update tests as appropriate.
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for more details.
-
----
-
-Feel free to customize the README further based on your preferences or any additional features you may want to highlight!
