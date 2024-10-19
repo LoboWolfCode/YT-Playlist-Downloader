@@ -7,8 +7,8 @@ Primarily using the `yt-dlp` package, I've simplified the process of bulk downlo
 ## Features
 
 - Downloads audio from YouTube videos.
-- Saves audio files in MP3 format.
-- Files are saved to a predefined directory: `D:\Music\Ipod`.
+- Saves audio files in your desired file format.
+- Files are saved to a predefined directory.
 
 ## Content Table (Ctrl-f to get your desired use-case code)
 
