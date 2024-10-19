@@ -1,0 +1,25 @@
+I recently got an iPod Classic and was looking for a fast and easy way to download my massive YT playlists. Everything, however, was either riddled with ads, only downloaded individual files (even though they claimed to be YT playlist to mp3), and/or was overly complicated to get up and running.
+
+**Target Audience**
+
+This script is designed for:
+
+* **iPod Classic Users**: My original reason for making this script. 
+* **Music Enthusiasts**: If you're seeking for a quick way to download playlists without ads.
+* **Casual Users**: Anyone looking for a straightforward method to download audio content from YouTube.
+
+These scripts offer a few benefits over directly using yt-dlp:
+
+ * Simpler Usage: This script provides a more user-friendly way to interact with yt-dlp for audio extraction. Instead of memorizing all the flags and arguments, you can simply call this script with the URL, output path, and desired file type.
+
+ * Error Handling: The script includes basic error handling using subprocess.run(command, check=True). If yt-dlp encounters an issue during download, the script will print an error message for debugging purposes.
+
+ * Output Template: The script constructs an output template that incorporates the video title and chosen file extension. This ensures downloaded files have descriptive names.
+
+However, it's important to consider some points:
+ 
+* Dependency on yt-dlp: This script relies on yt-dlp being installed and accessible on the system. Users who don't have yt-dlp installed will need to do so separately.
+ 
+* Limited Functionality: This script only offers audio extraction functionality with some basic options. yt-dlp itself is a much more powerful tool that can download entire videos, extract subtitles, and perform various other actions.
+
+Overall, this script simplifies using yt-dlp specifically for audio extraction with some error handling and output formatting. If you only need to download audio files and prefer a simpler interface, this script might be useful. But for more advanced use cases or direct control over yt-dlp's features, using yt-dlp itself is recommended.
