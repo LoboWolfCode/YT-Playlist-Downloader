@@ -44,15 +44,19 @@ This version of the script gives you a template where you can then change the fi
    - Download FFmpeg from [ffmpeg.org](https://ffmpeg.org/download.html).
    - Follow the installation instructions for your operating system.
    - Ensure that FFmpeg is added to your system's PATH so it can be accessed from the command line.
+  
+     * ffmpeg-7.x-essentials_build --> bin --> *Copy the directory*
+     * *Open*: Edit the System Environment Variables --> Environment Variables --> *Select* Path *Edit* --> *New* Ctrl-v the ffmpeg directory
 
 ## Usage
 
-1. **Clone or Download the Script**: Save the `yt_av.py` script to your desired location.
+1. **Clone or Download the Script**: Save the `yt_av.py` script to your *Users* directory name.
+
 ```python
 import subprocess
 import sys
 
-def download_audio_test(url):
+def yt_av(url):
     # Set a fixed output path and file type
     output_path = r"D:\Music\Ipod"  # Directory for saving files
     file_type = "mp3"  # Desired file type
@@ -77,7 +81,7 @@ if __name__ == "__main__":
         print("Usage: python yt_av.py <URL>")
     else:
         url = sys.argv[1]
-        download_audio_test(url)
+        yt_av(url)
 ```
 2. **Run the Script**: Use the command line to navigate to the directory where the script is saved. Run the script with the following command:
    ```bash
@@ -102,9 +106,21 @@ This command will save the audio as an MP3 file in the `D:\Music\Ipod` directory
   output_path = r"D:\Music\Ipod"  # Change this to your desired directory
   file_type = "mp3"  # Change this to your desired file type
   ```
+- You can also modify the file format to simply be whichever is the highest it can download:
+ ```bash
+  Change --audio-format to --audio-quality 0
+  ``` 
 
 # CMD Guide
-Alternatively to downloading the Python script, you can follow the laborious process to get it working without it :)
+Alternatively to downloading the Python script, you can follow this laborious process to get it working without it :)
+
+WILL ADD LATER
+
+
+
+
+
+
 
 
 ## Troubleshooting (All Sections)
